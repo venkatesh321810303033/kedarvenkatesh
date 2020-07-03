@@ -1,0 +1,15 @@
+1.write a python program to read an entire text file.
+def read(a):
+        txt = open(a)
+        print(txt.read())
+a=input("enter the file name:")
+read(a)
+
+2.Write a python program to read first n lines of a file.
+def readfirst(a, n):
+        from itertools import islice
+        with open(a) as f:
+                for l in islice(f,n):
+                        print(l,end ='')
+a=input("enter the file name:")
+readfirst(a,2)
